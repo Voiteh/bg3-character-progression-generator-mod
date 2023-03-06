@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="83dc7bc0-ae8c-4f3f-a3b1-e642b240c888" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/scala_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/styles/README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/DomainViewAdapter.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/GeneratorApplication.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/domain/MockProgressionService.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/domain/ProgressionService.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/domain/model.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/view/ClassProgressionFormLayout.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/view/ClassProgressionGenerator.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/view/MockProgressionGenerator.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/view/MockVersionProvider.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/view/VersionProvider.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/view/ViewFactory.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/view/model.scala" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Scala Trait" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/frontend/generated/index.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/frontend/src/README" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/GeneratorApplication.scala" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/view/ClassProgressionFormLayout.scala" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/vite.config.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/vite.generated.ts" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2Lg4z6RbQozLbuLudZipJf72DSw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/git/class-progression-generator&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.5735632&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;58e8afea02ce644f9546420d2f527b6a&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\potiopaw\\git\\class-progression-generator\\node_modules\\typescript\\lib&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\potiopaw\git\class-progression-generator\src\main\scala" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.application">
+    <configuration name="application" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="org.clazz.progression.generator.application" />
+      <module name="class-progression-generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.clazz.progression.generator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="org.clazz.progression.generator.main" />
+      <module name="class-progression-generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.clazz.progression.generator.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="application$" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="class-progression-generator" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.clazz.progression.generator.application$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.clazz.progression.generator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.application" />
+        <item itemvalue="Application.main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ScalaProjectSettings">
+    <option name="scala3DisclaimerShown" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="83dc7bc0-ae8c-4f3f-a3b1-e642b240c888" name="Changes" comment="" />
+      <created>1676279653594</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676279653594</updated>
+      <workItem from="1676279655279" duration="6409000" />
+      <workItem from="1676364062382" duration="37611000" />
+      <workItem from="1676896460912" duration="3084000" />
+      <workItem from="1677054135034" duration="11478000" />
+      <workItem from="1677487110771" duration="3103000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
