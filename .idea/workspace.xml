@@ -4,36 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83dc7bc0-ae8c-4f3f-a3b1-e642b240c888" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/scala_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/README" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/styles/README" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/DomainViewAdapter.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/GeneratorApplication.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/domain/MockProgressionService.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/domain/ProgressionService.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/domain/model.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/view/ClassProgressionFormLayout.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/view/ClassProgressionGenerator.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/view/MockProgressionGenerator.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/view/MockVersionProvider.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/view/VersionProvider.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/view/ViewFactory.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/view/model.scala" afterDir="false" />
+    <list default="true" id="83dc7bc0-ae8c-4f3f-a3b1-e642b240c888" name="Changes" comment="Initial commit">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/bg3/mod/character/progression/generator/domain/ProgressionService.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/bg3/mod/character/progression/generator/layout/form/CharacterProgressionForm.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/bg3/mod/character/progression/generator/layout/form/DownloadDialog.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/bg3/mod/character/progression/generator/layout/form/GeneratorMenuBar.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/bg3/mod/character/progression/generator/layout/form/LevelSelector.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/bg3/mod/character/progression/generator/layout/form/VersionSelector.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/bg3/mod/character/progression/generator/layout/form/events.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/bg3/mod/character/progression/generator/view/ClassProgressionGenerator.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/bg3/mod/character/progression/generator/view/MockProgressionGenerator.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/bg3/mod/character/progression/generator/view/VersionProvider.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/DomainViewAdapter.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/bg3/mod/character/progression/generator/DomainViewAdapter.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/GeneratorApplication.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/bg3/mod/character/progression/generator/GeneratorApplication.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/domain/MockProgressionService.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/domain/ProgressionService.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/domain/model.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/bg3/mod/character/progression/generator/domain/model.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/view/ClassProgressionFormLayout.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/view/ClassProgressionGenerator.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/view/MockProgressionGenerator.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/view/MockVersionProvider.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/bg3/mod/character/progression/generator/view/MockVersionProvider.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/view/VersionProvider.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/view/ViewFactory.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/view/model.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/bg3/mod/character/progression/generator/view/model.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +54,7 @@
     <setting file="file://$PROJECT_DIR$/frontend/src/README" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/GeneratorApplication.scala" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/scala/org/clazz/progression/generator/view/ClassProgressionFormLayout.scala" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/scala/bg3/mod/character/progression/generator/GeneratorApplication.scala" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/vite.config.ts" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/vite.generated.ts" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -97,16 +92,30 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\git\class-progression-generator\src\main\resources\old" />
       <recent name="C:\Users\potiopaw\git\class-progression-generator\src\main\scala" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.application">
+  <component name="RunManager" selected="Application.bg3.mod.character.progression.generator.application">
     <configuration name="application" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="org.clazz.progression.generator.application" />
+      <option name="MAIN_CLASS_NAME" value="org.character.progression.generator.application" />
       <module name="class-progression-generator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.clazz.progression.generator.*" />
+          <option name="PATTERN" value="org.character.progression.generator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="bg3.mod.character.progression.generator.application" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="bg3.mod.character.progression.generator.application" />
+      <module name="class-progression-generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bg3.mod.character.progression.generator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -119,7 +128,7 @@
       <module name="class-progression-generator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.clazz.progression.generator.domain.*" />
+          <option name="PATTERN" value="org.character.progression.generator.domain.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -142,6 +151,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.bg3.mod.character.progression.generator.application" />
         <item itemvalue="Application.application" />
         <item itemvalue="Application.main" />
       </list>
@@ -164,6 +174,14 @@
       <workItem from="1677054135034" duration="11478000" />
       <workItem from="1677487110771" duration="3103000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1678105114585</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678105114585</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,5 +197,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
 </project>

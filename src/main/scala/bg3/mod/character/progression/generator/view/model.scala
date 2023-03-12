@@ -1,8 +1,8 @@
-package org.clazz.progression.generator.view
+package bg3.mod.character.progression.generator.view
 
 import org.apache.commons.collections4.MultiValuedMap
-import org.clazz.progression.generator.view.model.form.CharacterProgression
-import org.clazz.progression.generator.view.model.form.CharacterProgression.Level
+import bg3.mod.character.progression.generator.view.model.form.CharacterProgression
+import bg3.mod.character.progression.generator.view.model.form.CharacterProgression.Level
 
 import java.util
 import java.util.UUID
@@ -30,21 +30,12 @@ object model {
 
   }
 
-  case class Level(number: Integer) {
+  type Level = Integer;
 
-    override def toString: String = number.toString
-
-    override def equals(obj: Any): Boolean = {
-      return obj match {
-        case other: Level => other.number == this.number
-        case _ => false
-      }
-    }
-
-    override def hashCode: Int = number.hashCode
-  }
-
-  case class CharacterClass(name: String, id: CharacterClass.Id, subclasses: MultiValuedMap[Level, CharacterSubclass]) {
+  case class CharacterClass(
+                             name: String,
+                             id: CharacterClass.Id,
+                             subclasses: MultiValuedMap[Level, CharacterSubclass]) {
     override def toString: String = name
   }
 
@@ -58,15 +49,26 @@ object model {
 
 
   object form {
-    case class CharacterProgression(gameVersion: GameVersion.Id, levels: immutable.Set[CharacterProgression.Level]);
+    case class CharacterProgression(
+                                     gameVersion: GameVersion.Id,
+                                     levels: immutable.Set[CharacterProgression.Level],
+                                     className: String
+                                   );
 
 
     object CharacterProgression {
 
       class Builder {
+        private var className: String = "";
         private var gameVersionId: GameVersion.Id | Null = null;
         private val levelBuilders: mutable.ListBuffer[CharacterProgression.Level.Builder]
         = new mutable.ListBuffer[CharacterProgression.Level.Builder]();
+
+
+        def className(name: String): Builder = {
+          this.className = name;
+          return this
+        }
 
         def gameVersion(id: GameVersion.Id): Builder = {
           this.gameVersionId = id;
@@ -85,7 +87,8 @@ object model {
             .toSet;
           return new CharacterProgression(
             gameVersion = this.gameVersionId,
-            levels = levels
+            levels = levels,
+            className = className
           )
         }
       }

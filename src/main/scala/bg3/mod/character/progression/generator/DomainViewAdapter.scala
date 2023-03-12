@@ -1,4 +1,4 @@
-package org.clazz.progression.generator
+package bg3.mod.character.progression.generator
 
 import org.springframework.stereotype.Component
 

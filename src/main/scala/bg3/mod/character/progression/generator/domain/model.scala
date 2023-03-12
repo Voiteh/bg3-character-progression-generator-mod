@@ -1,4 +1,4 @@
-package org.clazz.progression.generator.domain
+package bg3.mod.character.progression.generator.domain
 
 object model {
 
