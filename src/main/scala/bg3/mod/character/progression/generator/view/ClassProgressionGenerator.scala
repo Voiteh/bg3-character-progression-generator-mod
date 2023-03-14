@@ -1,6 +1,6 @@
 package bg3.mod.character.progression.generator.view
 
-import bg3.mod.character.progression.generator.view.model.form.CharacterProgression
+import bg3.mod.character.progression.generator.layout.form.CharacterProgression
 
 import java.net.URL
 

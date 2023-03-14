@@ -11,7 +11,8 @@ object events {
 
   class VersionSelect(source: Component, val gameVersion: GameVersion) extends FormEvent[Component](source)
 
-  class ClassSelect(source: Component, val characterClass: CharacterClass) extends FormEvent[Component](source)
+  class LevelConstructed(source: Component, val level: CharacterProgression.Level) extends FormEvent[Component](source)
 
-  class SubclassSelect(source: Component, val characterSubclass: CharacterSubclass) extends FormEvent[Component](source)
+  class GenerateProgression(source: Component) extends FormEvent[Component](source)
+
 }
