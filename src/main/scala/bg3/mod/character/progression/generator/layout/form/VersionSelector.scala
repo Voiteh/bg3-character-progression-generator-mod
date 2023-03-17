@@ -12,17 +12,17 @@ import org.springframework.beans.factory.annotation.Autowired
 import scala.jdk.javaapi.StreamConverters
 import java.util
 import java.util.stream
-
 import com.vaadin.flow.component.ComponentUtil
+import com.vaadin.flow.component.HasValue.ValueChangeEvent
 import com.vaadin.flow.component.UI
+import com.vaadin.flow.data.selection.SingleSelectionEvent
 
-class VersionSelector(provider: DataProvider[GameVersion, Void]) extends Select[GameVersion]() {
+class VersionSelector(provider: DataProvider[GameVersion, Void]) extends Select[GameVersion]()  {
   val selectedVersion: SelectDataView[GameVersion] = setItems(provider);
 
   this.addValueChangeListener(event => ComponentUtil.fireEvent(
     UI.getCurrent, new events.VersionSelect(this, event.getValue))
   )
-
 
   override def setErrorMessage(errorMessage: String): Unit = super.setErrorMessage(errorMessage)
 
