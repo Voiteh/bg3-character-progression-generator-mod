@@ -15,4 +15,8 @@ object events {
 
   class GenerateProgression(source: Component) extends FormEvent[Component](source)
 
+  class ClassNamed(source: Component, val name: String) extends FormEvent[Component](source)
+
+  class FormValidation(source: Component, val valid: Boolean) extends FormEvent[Component](source)
+
 }

@@ -16,8 +16,8 @@ class GeneratorMenuBar() extends MenuBar() {
   protected override def onAttach(attachEvent: AttachEvent): Unit = {
     super.onAttach(attachEvent)
     // Register to events from the event bus
-    registration = ComponentUtil.addListener(attachEvent.getUI, classOf[events.VersionSelect], event => {
-        generate.setEnabled(true)
+    registration = ComponentUtil.addListener(attachEvent.getUI, classOf[events.FormValidation], event => {
+        generate.setEnabled(event.valid)
     })
   }
 

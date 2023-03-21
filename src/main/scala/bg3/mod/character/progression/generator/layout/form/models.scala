@@ -15,11 +15,14 @@ case class CharacterProgression(
 
 object CharacterProgression {
 
-  class Builder {
-    private var className: String = "";
+  class Builder(val requiredLevels: Integer) {
+    private var className: String | Null = null;
     private var gameVersionId: GameVersion.Id | Null = null;
     private val levels: mutable.Set[CharacterProgression.Level] = mutable.Set.empty;
 
+    def validate(): Boolean = {
+      return className != null && gameVersionId != null && levels.size == 5;
+    }
 
     def className(name: String): Builder = {
       this.className = name;

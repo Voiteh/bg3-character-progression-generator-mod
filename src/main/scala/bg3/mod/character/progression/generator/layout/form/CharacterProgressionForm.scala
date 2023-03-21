@@ -44,17 +44,27 @@ class CharacterProgressionForm
         ComponentUtil.addListener(attachEvent.getUI, classOf[events.VersionSelect], (event: events.VersionSelect) => {
           dynamicContent.removeAll()
           dynamicContent.add(
+            new ClassNamer(),
             new LevelSelector(event.gameVersion.availableLevels, event.gameVersion.classes)
           )
-          this.data = new CharacterProgression.Builder();
+          this.data = new CharacterProgression.Builder(event.gameVersion.availableLevels);
           this.data match {
-            case builder: CharacterProgression.Builder => builder.gameVersion(event.gameVersion.id)
+            case builder: CharacterProgression.Builder =>
+              ComponentUtil.fireEvent(this,
+                new events.FormValidation(this,
+                  builder.gameVersion(event.gameVersion.id).validate()
+                )
+              )
+
           }
         }),
         ComponentUtil.addListener(attachEvent.getUI, classOf[events.LevelConstructed],
           (event: events.LevelConstructed) => {
             this.data match {
-              case builder: CharacterProgression.Builder => builder.putLevel(event.level)
+              case builder: CharacterProgression.Builder => ComponentUtil.fireEvent(this,
+                new events.FormValidation(this, builder.putLevel(event.level).validate()
+                )
+              )
             }
           }),
         ComponentUtil.addListener(attachEvent.getUI, classOf[events.GenerateProgression],
@@ -67,11 +77,11 @@ class CharacterProgressionForm
               }
             }
           }),
-        versionSelector.addValidator((progression, context) => {
-          if (progression == null) {
-            ValidationResult.error("Invalid game version")
-          } else {
-            ValidationResult.ok()
+        ComponentUtil.addListener(attachEvent.getUI, classOf[events.ClassNamed], event => {
+          this.data match {
+            case builder: CharacterProgression.Builder => ComponentUtil.fireEvent(this,
+              new events.FormValidation(this, builder.className(event.name).validate())
+            )
           }
         })
       )
