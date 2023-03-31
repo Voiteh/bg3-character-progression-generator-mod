@@ -21,7 +21,7 @@ object CharacterProgression {
     private val levels: mutable.Set[CharacterProgression.Level] = mutable.Set.empty;
 
     def validate(): Boolean = {
-      return className != null && gameVersionId != null && levels.size == 5;
+      return className != null && gameVersionId != null && levels.size == requiredLevels;
     }
 
     def className(name: String): Builder = {
@@ -73,14 +73,15 @@ object CharacterProgression {
       def build(): CharacterProgression.Level = {
         return new CharacterProgression.Level(
           number = this.number,
-          classId = this.classId
+          classId = this.classId,
+          subclassId = this.subclassId
         );
       }
     }
 
   }
 
-  case class Level(number: Integer, classId: CharacterClass.Id) {
+  case class Level(number: Integer, classId: CharacterClass.Id, subclassId: CharacterSubclass.Id|Null =null) {
 
     override def equals(obj: Any): Boolean = {
       return obj match {

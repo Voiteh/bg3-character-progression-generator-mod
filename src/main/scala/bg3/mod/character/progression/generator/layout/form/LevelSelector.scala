@@ -4,15 +4,16 @@ import com.vaadin.flow.component.accordion.{Accordion, AccordionPanel}
 import com.vaadin.flow.component.formlayout.FormLayout
 import com.vaadin.flow.component.select.Select
 import bg3.mod.character.progression.generator.view.model.{CharacterClass, CharacterSubclass, GameVersion, Level}
-import com.vaadin.flow.component.{Component, HasComponents}
+import com.vaadin.flow.component.{Component, ComponentUtil, HasComponents}
 import com.vaadin.flow.data.provider.{DataProviderListener, InMemoryDataProvider, ListDataProvider, Query}
 import com.vaadin.flow.function.{SerializableComparator, SerializablePredicate}
 import com.vaadin.flow.shared.Registration
 import org.apache.commons.collections4.MultiValuedMap
 import org.apache.commons.collections4.multimap.HashSetValuedHashMap
 import com.vaadin.flow.data.binder.{ValidationResult, ValueContext, Validator as Dator}
+
 import java.util.stream
-import bg3.mod.character.progression.generator.layout.form.validation._
+import bg3.mod.character.progression.generator.layout.form.validation.*
 
 class LevelSelector(availableLevels: Integer, classes: Seq[CharacterClass]) extends Accordion() {
   val selected = new HashSetValuedHashMap[CharacterClass.Id, Level]();
@@ -29,14 +30,27 @@ class LevelSelector(availableLevels: Integer, classes: Seq[CharacterClass]) exte
         .forEach(item => formLayout.remove(item));
       val selectedLevels = selected.get(event.getValue.id).size();
       val subclasses = event.getValue.subclasses.get(selectedLevels + 1);
-
-      if (!subclasses.isEmpty) {
+      if (subclasses.isEmpty) {
+        ComponentUtil.fireEvent(getUI.get(),
+          new events.LevelConstructed(this,
+            new CharacterProgression.Level(level, event.getValue.id)
+          )
+        )
+      }
+      else {
         val subclassSelect = new Select[CharacterSubclass]()
         subclassSelect.setInvalid(true)
         subclassSelect.setErrorMessage(LevelSelector.subclassSelectError)
         subclassSelect.addValidator(new LevelSelector.SubclassValidator())
         subclassSelect.setItems(new ListDataProvider[CharacterSubclass](subclasses))
         subclassSelect.setLabel("Select subclass")
+        subclassSelect.addValueChangeListener(subEvent => {
+          ComponentUtil.fireEvent(getUI.get(),
+            new events.LevelConstructed(this,
+              new CharacterProgression.Level(level, event.getValue.id, subEvent.getValue.id)
+            )
+          )
+        })
         formLayout.add(subclassSelect)
       }
       selected.put(event.getValue.id, level);

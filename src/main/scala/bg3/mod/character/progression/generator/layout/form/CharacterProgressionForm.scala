@@ -25,10 +25,11 @@ class CharacterProgressionForm
   val versionSelector = new VersionSelector(
     provider = new VersionSelector.DataProvider(versionProvider)
   );
+  val menuBar=new GeneratorMenuBar()
   val content: VerticalLayout = new VerticalLayout(
     versionSelector,
     dynamicContent,
-    new GeneratorMenuBar()
+    menuBar
   )
   content.getStyle.set("align-items", "center")
   setContent(content)
@@ -50,7 +51,7 @@ class CharacterProgressionForm
           this.data = new CharacterProgression.Builder(event.gameVersion.availableLevels);
           this.data match {
             case builder: CharacterProgression.Builder =>
-              ComponentUtil.fireEvent(this,
+              ComponentUtil.fireEvent(attachEvent.getUI,
                 new events.FormValidation(this,
                   builder.gameVersion(event.gameVersion.id).validate()
                 )
@@ -61,7 +62,7 @@ class CharacterProgressionForm
         ComponentUtil.addListener(attachEvent.getUI, classOf[events.LevelConstructed],
           (event: events.LevelConstructed) => {
             this.data match {
-              case builder: CharacterProgression.Builder => ComponentUtil.fireEvent(this,
+              case builder: CharacterProgression.Builder => ComponentUtil.fireEvent(attachEvent.getUI,
                 new events.FormValidation(this, builder.putLevel(event.level).validate()
                 )
               )
@@ -79,7 +80,7 @@ class CharacterProgressionForm
           }),
         ComponentUtil.addListener(attachEvent.getUI, classOf[events.ClassNamed], event => {
           this.data match {
-            case builder: CharacterProgression.Builder => ComponentUtil.fireEvent(this,
+            case builder: CharacterProgression.Builder => ComponentUtil.fireEvent(attachEvent.getUI,
               new events.FormValidation(this, builder.className(event.name).validate())
             )
           }

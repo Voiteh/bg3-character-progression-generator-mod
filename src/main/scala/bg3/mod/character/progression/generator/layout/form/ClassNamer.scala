@@ -25,8 +25,8 @@ class ClassNamer extends TextField {
     setInvalid(true)
     setErrorMessage(ClassNamer.errorMessage)
     registrations.addOne(
-      addCompositionEndListener(event => ComponentUtil.fireEvent(this,
-        new events.ClassNamed(this,event.getData))
+      addValueChangeListener(event => ComponentUtil.fireEvent(attachEvent.getUI,
+        new events.ClassNamed(this,event.getValue))
       )
     )
   }
