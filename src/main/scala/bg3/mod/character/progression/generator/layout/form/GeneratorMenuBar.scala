@@ -11,7 +11,9 @@ class GeneratorMenuBar() extends MenuBar() {
   val generate = new Button("Generate progression", new Icon(VaadinIcon.AUTOMATION));
   generate.setEnabled(false)
   addItem(generate)
-
+  generate.addClickListener(event => {
+    ComponentUtil.fireEvent(getUI.get(), new events.GenerateProgression(this))
+  })
   private var registration: Registration | Null = null
 
   protected override def onAttach(attachEvent: AttachEvent): Unit = {
