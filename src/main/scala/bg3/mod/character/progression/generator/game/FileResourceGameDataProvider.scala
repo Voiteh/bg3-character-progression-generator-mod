@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component
 import java.io.{File, FileFilter}
 import java.util.stream.Collectors
 
-private case class VersionFolder(name: String, files: Seq[File])
+private case class VersionFolder(name: String, files: List[File])
 
 @Component
 class FileResourceGameDataProvider(@Autowired mapper: XmlMapper, @Autowired @Qualifier("versions") classPathResource: ClassPathResource) extends GameDataProvider {
@@ -19,15 +19,25 @@ class FileResourceGameDataProvider(@Autowired mapper: XmlMapper, @Autowired @Qua
     .map(file => VersionFolder(
       name = file.getName,
       files = file.listFiles.filter(file => file.isFile && file.getName.endsWith(".lsx"))
-        .to(Seq)
+        .to(List)
     ))
-  versionsFolder.toString;
 
-  override def versions: Seq[model.GameVersion] = {
-    return versionFolders.to(LazyList)
-      .map(folder => new model.GameVersion(
+
+  override def version(name: String): model.GameVersion | Null = {
+    return versionFolders.find(item => item.name.equals(name))
+      .map(folder => model.GameVersion(
         name = folder.name,
-        files = folder.files.map(file => mapper.readValue(file, classOf[model.LSX]))
-      ))
+        files = folder.files.map(file => model.LSX(
+          name = file.getName,
+          save = mapper.readValue(file, classOf[model.Save])
+        ))
+        ))
+        .orNull;
+  }
+
+  override def versions: List[model.GameVersion] = {
+    return versionFolders.map(folder => version(folder.name))
+      .filter(item => item != null)
+      .to(List)
   }
 }

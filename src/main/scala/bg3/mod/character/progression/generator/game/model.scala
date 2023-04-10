@@ -1,43 +1,55 @@
 package bg3.mod.character.progression.generator.game
 
+import com.fasterxml.jackson.dataformat.xml.annotation.{JacksonXmlProperty, JacksonXmlRootElement}
+
 object model {
   type Id = String;
   type Type = String;
   type Value = String;
 
-  case class GameVersion(name: String, files: Seq[LSX])
+  case class GameVersion(name: String, files: List[LSX])
 
-  case class LSX(save: Save)
+  case class LSX(
+                  name: String,
+                  save: Save
+                )
 
+  @JacksonXmlRootElement(localName = "save")
   case class Save(
-                   version: Version,
-                   regions: Seq[Region]
+                   @JacksonXmlProperty(isAttribute = false, localName = "version")
+                   version: Version | Null,
+                   @JacksonXmlProperty(isAttribute = false, localName = "region")
+                   regions: List[Region] = List()
                  )
 
   case class Version(
-                      major: Integer, minor: Integer,
-                      revision: Integer,
-                      build: Integer
+                      major: String | Null,
+                      minor: String | Null,
+                      revision: String | Null,
+                      build: String | Null
                     )
 
   case class Region(
-                     id: Id,
-                     nodes: Seq[Node]
+                     id: Id | Null,
+                     @JacksonXmlProperty(isAttribute = false, localName = "node")
+                     nodes: List[Node] = List()
                    )
 
   case class Node(
-                   id: Id,
-                   attributes: Seq[Attribute],
-                   children: Children
+                   id: Id | Null,
+                   @JacksonXmlProperty(isAttribute = false, localName = "attribute")
+                   attributes: List[Attribute] = List(),
+                   children: Children|Null
                  )
 
   case class Children(
-                       nodes: Seq[Node]
+                       @JacksonXmlProperty(isAttribute = false, localName = "node")
+                       nodes: List[Node] = List()
                      )
 
   case class Attribute(
-                        id: Id,
-                        `type`: Type,
-                        value: Value
+                        id: Id | Null,
+                        `type`: Type | Null,
+                        value: Value | Null
                       )
 }

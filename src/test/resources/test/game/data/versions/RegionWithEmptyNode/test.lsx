@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="1" minor="1" revision="1" build="1"/>
+    <region id="Some id">
+        <node id="root">
+        </node>
+    </region>
+</save>
