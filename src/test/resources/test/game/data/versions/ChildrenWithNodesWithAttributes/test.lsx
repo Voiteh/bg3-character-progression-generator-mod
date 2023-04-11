@@ -10,9 +10,9 @@
                     <attribute id="node 1 attribute 3" type="some type" value="some value"/>
                 </node>
                 <node id="node 2">
-                    <attribute id="node 1 attribute 1" type="some type" value="some value"/>
-                    <attribute id="node 1 attribute 2" type="some type" value="some value"/>
-                    <attribute id="node 1 attribute 3" type="some type" value="some value"/>
+                    <attribute id="node 2 attribute 1" type="some type" value="some value"/>
+                    <attribute id="node 2 attribute 2" type="some type" value="some value"/>
+                    <attribute id="node 2 attribute 3" type="some type" value="some value"/>
                 </node>
             </children>
         </node>
